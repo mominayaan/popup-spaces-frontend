@@ -1,0 +1,29 @@
+/* /app/common/components/BusinessCard.module.css */
+
+.businessCard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .coverPhoto {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .businessInfo {
+    padding: 20px;
+  }
+  
+  .businessInfo h3 {
+    margin-top: 0;
+  }
+  
+  .distance,
+  .footTraffic,
+  .availableSpace,
+  .rating {
+    margin-top: 10px;
+  }
+  
