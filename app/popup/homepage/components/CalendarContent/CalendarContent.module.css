@@ -1,0 +1,59 @@
+/* CalendarContent.module.css */
+
+.container {
+    display: flex;
+  }
+  
+  .profilesMenuContainer {
+    background-color: #ccc; /* Grey background for the menu container */
+    padding: 20px; /* Add padding for spacing */
+    height: 100vh;
+  }
+  
+  .profilesMenu {
+    width: 100%; /* Make the menu fill the container width */
+  }
+  
+  .profileCheckbox {
+    margin-bottom: 5px; /* Add spacing between profile checkboxes */
+  }
+  
+  .calendar {
+    flex: 1; /* Use remaining space for the calendar */
+    overflow-x: auto;
+  }
+  
+  .week {
+    display: flex;
+  }
+  
+  .day {
+    flex: 1;
+    border: 1px solid #ccc;
+  }
+  
+  .dayHeader {
+    background-color: #f0f0f0;
+    padding: 5px;
+  }
+  
+  .events {
+    padding: 5px;
+  }
+
+  .navigationContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  
+  .weekNavigation button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px; /* Adjust size as needed */
+    background-color: #f0f0f0; /* Example background color, adjust as needed */
+    border: 1px solid #ccc; /* Example border, adjust as needed */
+    border-radius: 5px; /* Optional: for rounded corners */
+  }
+  

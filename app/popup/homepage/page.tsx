@@ -8,7 +8,7 @@ import styles from './styles/Homepage.module.css';
 
 import ExploreContent from './components/ExploreContent/ExploreContent';
 import MapContent from './components/MapContent';
-import CalendarContent from './components/CalendarContent';
+import CalendarContent from './components/CalendarContent/CalendarContent';
 import MessengerContent from './components/MessengerContent/MessengerContent';
 import MyPopupsContent from './components/MyPopupsContent';
 
