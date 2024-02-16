@@ -1,0 +1,112 @@
+.businessListingsSection {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  .explorePage {
+    display: flex;
+    padding: 20px;
+    gap: 20px; /* Ensures space between filters and listings */
+  }
+  
+  .filtersSection {
+    flex-basis: 300px; /* Fixed width of the filters section */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff; /* White background for the filters section */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .searchBar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding does not add to width */
+  }
+  
+  .filtersSection h3 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Uppercase filter title */
+  }
+  
+  .filterItem {
+    margin-bottom: 20px;
+  }
+  
+  .filterItem label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .filterItem input,
+  .filterItem select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding does not add to width */
+  }
+  
+  .searchButton {
+    padding: 10px;
+    width: 100%;
+    background-color: #6200ea; /* Example purple color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase; /* Uppercase button text */
+  }
+  
+  .searchButton:hover {
+    background-color: #3700b3; /* Darken the button on hover */
+  }
+
+  .filtersTitle {
+    font-size: 1.2rem; /* Example size, adjust as needed */
+    color: #333; /* Dark text color for the title */
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd; /* Light line under the title */
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the foot-traffic filter container */
+  .footTrafficFilter {
+    display: flex;
+    justify-content: space-between; /* Space out the buttons evenly */
+    margin-bottom: 20px; /* Spacing after the filter */
+  }
+  
+  /* Generic style for each filter option */
+  .filterOption {
+    background: #f0f0f0; /* Light grey background */
+    padding: 10px 15px; /* Padding inside the buttons */
+    border: 1px solid #ddd; /* Light border for the buttons */
+    border-radius: 20px; /* Rounded corners for the buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    user-select: none; /* Prevent text selection */
+  }
+  
+  /* Hidden radio button (but still accessible) */
+  .filterOption input[type="radio"] {
+    display: none; /* Hide the radio button */
+  }
+  
+  /* Style for the label that represents the radio button */
+  .filterOption label {
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  /* Style when a radio button is checked */
+  .filterOption input[type="radio"]:checked + label {
+    background: #6200ee; /* Purple background for selected option */
+    color: white; /* White text for the selected option */
+    border-color: #6200ee; /* Purple border for selected option */
+  }

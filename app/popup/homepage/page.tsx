@@ -6,9 +6,9 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import styles from './styles/Homepage.module.css';
 
-import ExploreContent from './components/ExploreContent';
+import ExploreContent from './components/ExploreContent/ExploreContent';
 import MapContent from './components/MapContent';
-import CalendarContent from './components/CalendarContent';
+import CalendarContent from './components/CalendarContent/CalendarContent';
 import MessengerContent from './components/MessengerContent/MessengerContent';
 import MyPopupsContent from './components/MyPopupsContent';
 
@@ -19,7 +19,7 @@ const Homepage: React.FC = () => {
     setSelectedOption(option);
   };
 
-  let content = <p><div><ExploreContent /></div></p>;
+  let content = <ExploreContent />;
 
   switch (selectedOption) {
     case 'explore':
@@ -47,9 +47,9 @@ const Homepage: React.FC = () => {
         <title>PopUp Spaces</title>
       </Head>
 
-      <header className={styles.header}>
+      <div className={styles.header}>
         <h1>PopUp Spaces</h1>
-      </header>
+      </div>
       
       <nav className={styles.nav}>
         <button onClick={() => handleOptionClick('explore')}>Explore</button>

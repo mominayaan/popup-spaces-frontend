@@ -1,0 +1,26 @@
+/* components/Event.module.css */
+
+.event {
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .eventContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .eventDetails {
+    display: flex; /* Use flex display */
+    flex-direction: column; /* Stack the details vertically */
+    align-items: flex-start; /* Align items to the start */
+    font-size: 0.9em;
+  }
+  
+  .eventDetails > div {
+    margin: 0; /* Remove margin for each detail */
+  }
+  
