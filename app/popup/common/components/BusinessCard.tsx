@@ -1,48 +1,28 @@
-// BusinessCard.tsx
 import React from 'react';
-import styles from './BusinessCard.module.css';
+import styles from './BusinessCard.module.css'; // Adjust the import path as necessary
 
 interface BusinessCardProps {
-  businessId: number;
-  onClick: () => void; // Define a function to handle click event
+  name: string;
+  imageSrc: string;
+  area: string;
+  traffic: string;
+  address: string;
+  onClick: () => void; // Assuming a click handler for 'Learn More' button
 }
 
-const getRandomInt = (min: number, max: number) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
-
-const BusinessCard: React.FC<BusinessCardProps> = ({ businessId, onClick }) => {
-  // Generate random data for business card
-  const randomRating = getRandomInt(3, 5) + Math.random().toFixed(1); // Generate rating between 3.0 and 5.0
-  const randomFootTraffic = getRandomInt(50, 200);
-  const randomAvailableSpace = getRandomInt(20, 100);
-
-  const businessData = {
-    id: businessId,
-    name: `Business ${businessId}`,
-    rating: randomRating,
-    distance: `${(Math.random() * 10).toFixed(1)} miles`, // Generate random distance
-    footTraffic: randomFootTraffic,
-    availableSpace: randomAvailableSpace,
-  };
-
+const BusinessCard: React.FC<BusinessCardProps> = ({ name, imageSrc, area, traffic, address, onClick }) => {
   return (
-    <div className={styles.businessCard} onClick={onClick}> {/* Add onClick event handler */}
-      <div className={styles.businessInfo}>
-        <h3>{businessData.name}</h3>
-        <div className={styles.rating}>
-          Rating: {businessData.rating}
-        </div>
-        <div className={styles.distance}>
-          Distance: {businessData.distance}
-        </div>
-        <div className={styles.footTraffic}>
-          Foot Traffic: {businessData.footTraffic}
-        </div>
-        <div className={styles.availableSpace}>
-          Available Space: {businessData.availableSpace} ft²
-        </div>
+    <div className={styles.card}>
+      <img src={imageSrc} alt={name} className={styles.cardImage} />
+      <h3 className={styles.cardTitle}>{name}</h3>
+      <div className={styles.cardInfo}>
+        <span className={styles.cardArea}>{area}</span>
+        <span className={styles.cardTraffic}>{traffic}</span>
       </div>
+      <div className={styles.cardAddress}>
+        <span>{address}</span>
+      </div>
+      <button className={styles.learnMoreButton} onClick={onClick}>Learn More</button>
     </div>
   );
 };

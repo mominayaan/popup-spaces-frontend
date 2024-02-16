@@ -1,68 +1,112 @@
-/* ExploreContent.module.css */
+.businessListingsSection {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  .explorePage {
+    display: flex;
+    padding: 20px;
+    gap: 20px; /* Ensures space between filters and listings */
+  }
+  
+  .filtersSection {
+    flex-basis: 300px; /* Fixed width of the filters section */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff; /* White background for the filters section */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .searchBar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding does not add to width */
+  }
+  
+  .filtersSection h3 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Uppercase filter title */
+  }
+  
+  .filterItem {
+    margin-bottom: 20px;
+  }
+  
+  .filterItem label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .filterItem input,
+  .filterItem select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding does not add to width */
+  }
+  
+  .searchButton {
+    padding: 10px;
+    width: 100%;
+    background-color: #6200ea; /* Example purple color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase; /* Uppercase button text */
+  }
+  
+  .searchButton:hover {
+    background-color: #3700b3; /* Darken the button on hover */
+  }
 
-/* Main container for ExploreContent */
-.exploreContent {
-  display: flex;
-  position: relative; /* Add relative positioning */
-  height: calc(100vh - 40px); /* Set height to screen height minus header height */
-}
-
-/* Filters menu */
-.filterMenu {
-  position: sticky; /* Fix the position */
-  top: 0; /* Align to the top */
-  background-color: #f0f0f0; /* Light grey background */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 100%; /* Take up full height */
-  overflow-y: auto; /* Add vertical scrollbar if content overflows */
-}
-
-/* Individual filter items */
-.filters {
-  padding: 20px;
-}
-
-.filters h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-.filterItem {
-  margin-bottom: 10px;
-}
-
-.filterItem label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.filterItem input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff; /* Add a white background for input fields */
-}
-
-.filterItem input:focus {
-  outline: none;
-  border-color: #007bff;
-}
-
-/* Business cards section */
-.businessCards {
-  flex: 1; /* Take up remaining space */
-  overflow-y: auto; /* Add vertical scrollbar if content exceeds height */
-  max-height: calc(100vh - 100px); /* Set max height to screen height minus header height */
-}
-
-/* Grid layout for business cards */
-.businessCardGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
+  .filtersTitle {
+    font-size: 1.2rem; /* Example size, adjust as needed */
+    color: #333; /* Dark text color for the title */
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd; /* Light line under the title */
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the foot-traffic filter container */
+  .footTrafficFilter {
+    display: flex;
+    justify-content: space-between; /* Space out the buttons evenly */
+    margin-bottom: 20px; /* Spacing after the filter */
+  }
+  
+  /* Generic style for each filter option */
+  .filterOption {
+    background: #f0f0f0; /* Light grey background */
+    padding: 10px 15px; /* Padding inside the buttons */
+    border: 1px solid #ddd; /* Light border for the buttons */
+    border-radius: 20px; /* Rounded corners for the buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    user-select: none; /* Prevent text selection */
+  }
+  
+  /* Hidden radio button (but still accessible) */
+  .filterOption input[type="radio"] {
+    display: none; /* Hide the radio button */
+  }
+  
+  /* Style for the label that represents the radio button */
+  .filterOption label {
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  /* Style when a radio button is checked */
+  .filterOption input[type="radio"]:checked + label {
+    background: #6200ee; /* Purple background for selected option */
+    color: white; /* White text for the selected option */
+    border-color: #6200ee; /* Purple border for selected option */
+  }
